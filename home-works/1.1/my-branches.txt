@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+* dev
+  dev_hw_1.1
+=======
+  dev
+* dev_hw_1.1
+>>>>>>> dev_hw_1.1
+  dev_hw_1.2
+  main
