@@ -2,7 +2,7 @@
 
 `Декодированое сообщение от L: 05.aes256`
 
-Ура! Если ты читаешь это сообщение то ты добралась до программирования на Python.
+Ура! Если ты читаешь это сообщение - то ты добралась до программирования на Python.
 
 ![L](../img/L-2.jpg)
 
@@ -10,7 +10,9 @@
 
 В этом сообщении я подготовил информацию о различных типах которые присутсвуют в Питоне. Понимание этого позволит понимать что происходит и искать и находить баги - ведь 50% багов в пито это ошибки присваивания типов.
 
-### `Классическая первая программа`
+## Классическая первая программа
+
+[in]
 
 ```python
 print('Hello world!')
@@ -22,7 +24,9 @@ print('Hello world!')
 - не требуется специфических объявлений точки входа программы (main в C++) - код запускается с первой строки файла/ячейки
 - `print` - стандартная функция языка, печатающая аргументы в стандартный поток вывода
 
-### `Операторы присваивания`
+## Операторы присваивания
+
+[in]
 
 ```python
 a = 5
@@ -32,6 +36,8 @@ print(a)
 
     5
 
+[in]
+
 ```python
 a, b, c = 5, 6, 7
 print(a, b, c)
@@ -40,7 +46,9 @@ print(a, b, c)
 
     5 6 7
 
-### `Ввод с клавиатуры`
+## Ввод с клавиатуры
+
+[in]
 
 ```python
 f_name = input('Enter your first name:')
@@ -53,7 +61,9 @@ print(f_name, l_name)
     Enter your last name:Apishev
     Murat Apishev
 
-### `Выполнение кода на Python в виде строки`
+## Выполнение кода на Python в виде строки
+
+[in]
 
 ```python
 eval('123 + 45')
@@ -61,6 +71,8 @@ eval('123 + 45')
 [out]
 
     168
+
+[in]
 
 ```python
 exec(
@@ -79,7 +91,9 @@ print(a, b)
 - `eval` позволяет вычислить выражение и возвращает его результат (чистая функция)
 - `exec` позволяет запустить любой фрагмент кода на python (пример: ячейки Jupyter Notebook)
 
-### `Объекты и переменные`
+## Объекты и переменные
+
+[in]
 
 ```python
 4
@@ -91,12 +105,16 @@ print(a, b)
 - создан объект типа `int`, который содержит значение 4
 - поскольку на этот объект нет ссылок, он уничтожается после создания и печати
 
+[in]
+
 ```python
 a = 5
 ```
 
 - создан объект типа `int`, в котором содержится значение 5
 - затем создана переменная с именем `a`, которая ссылается на этот объект
+
+[in]
 
 ```python
 del a
@@ -105,7 +123,9 @@ del a
 - переменная `a` принудительно удалена
 - объект, на который она ссылалась, тоже был удалён, поскольку больше на него нет ссылок
 
-### `Объекты и переменные`
+## Объекты и переменные
+
+[in]
 
 ```python
 a = 5
@@ -115,6 +135,8 @@ b = a
 - создан объект типа `int`, в котором содержится значение 5
 - затем создана переменная с именем `a`, которая ссылается на этот объект
 - создана переменная `b`, которая указывает на тот же объект типа `int`
+
+[in]
 
 ```python
 a = a + 1  # equals to a += 1
@@ -128,7 +150,7 @@ print(b)
 - переменная `a` начинает ссылаться на него и больше не связана с объектом, равным 5
 - `b` продолжает ссылаться на него
 
-### `Объекты и переменные в Python`
+## Объекты и переменные в Python
 
 - Переменные $\ne$ объекты
 - Объект - это сущность, созданная и используемая в коде
@@ -137,7 +159,7 @@ print(b)
 - У одного объекта может быть много ссылок-переменных
 - Объекты являются строго типизированными, ссылки - нет
 
-### `Основные встроенные типы данных`
+## Основные встроенные типы данных
 
 - _логический, числовые, None_
 - _строковые_
@@ -152,7 +174,9 @@ Python -
 
 __Тип объекта можно получить с помощью функции type__
 
-### `Логический тип`
+## Логический тип
+
+[in]
 
 ```python
 True or False
@@ -161,12 +185,16 @@ True or False
 
     True
 
+[in]
+
 ```python
 True or destroy_the_world()
 ```
 [out]
 
     True
+
+[in]
 
 ```python
 True and (False or True)
@@ -175,12 +203,16 @@ True and (False or True)
 
     True
 
+[in]
+
 ```python
 bool()
 ```
 [out]
 
     False
+
+[in]
 
 ```python
 type(True)
@@ -189,9 +221,11 @@ type(True)
 
     bool
 
-### `Целые числа`
+## Целые числа
 
 В Python тип `int` поддерживает бесконечно большие числа
+
+[in]
 
 ```python
 2 + 5
@@ -200,12 +234,16 @@ type(True)
 
     7
 
+[in]
+
 ```python
 4 // 3
 ```
 [out]
 
     1
+
+[in]
 
 ```python
 4 % 3
@@ -214,12 +252,16 @@ type(True)
 
     1
 
+[in]
+
 ```python
 2 ** 100
 ```
 [out]
 
     1267650600228229401496703205376
+
+[in]
 
 ```python
 type(1)
@@ -228,7 +270,9 @@ type(1)
 
     int
 
-### `Литераты типа int`
+## Литераты типа int
+
+[in]
 
 ```python
 100, -20, 0  # decimal
@@ -237,12 +281,16 @@ type(1)
 
     (100, -20, 0)
 
+[in]
+
 ```python
 0b11, 0B10  # binary
 ```
 [out]
 
     (3, 2)
+
+[in]
 
 ```python
 0o11, 0O11  # octal
@@ -251,12 +299,16 @@ type(1)
 
     (9, 9)
 
+[in]
+
 ```python
 0x90A, 0X9F # hexadecimal
 ```
 [out]
 
     (2314, 159)
+
+[in]
 
 ```python
 bin(1000), oct(1000), hex(1000)
@@ -265,9 +317,11 @@ bin(1000), oct(1000), hex(1000)
 
     ('0b1111101000', '0o1750', '0x3e8')
 
-### `Побитовые операции`
+## Побитовые операции
 
 Работаем с целыми числами как с битовыми массивами
+
+[in]
 
 ```python
 1 << 2  # 001b -> 100b == 4d
@@ -276,12 +330,16 @@ bin(1000), oct(1000), hex(1000)
 
     4
 
+[in]
+
 ```python
 7 >> 1  # 111b -> 011b == 3d
 ```
 [out]
 
     3
+
+[in]
 
 ```python
 1 & 2  # 01b || 10b == 00b
@@ -290,6 +348,8 @@ bin(1000), oct(1000), hex(1000)
 
     0
 
+[in]
+
 ```python
 1 | 2  # 01b || 10b == 11b == 3d
 ```
@@ -297,9 +357,11 @@ bin(1000), oct(1000), hex(1000)
 
     3
 
-### `Числа с плавающей точкой`
+## Числа с плавающей точкой
 
 Вещественные числа в Python - это тип `double` из C
+
+[in]
 
 ```python
 1.0 + 2
@@ -308,12 +370,16 @@ bin(1000), oct(1000), hex(1000)
 
     3.0
 
+[in]
+
 ```python
 4 / 3
 ```
 [out]
 
     1.3333333333333333
+
+[in]
 
 ```python
 3 ** 2.5
@@ -322,12 +388,16 @@ bin(1000), oct(1000), hex(1000)
 
     15.588457268119896
 
+[in]
+
 ```python
 type(1.0)
 ```
 [out]
 
     float
+
+[in]
 
 ```python
 type(float())
@@ -336,9 +406,11 @@ type(float())
 
     float
 
-### `Литераты числовых типов языка`
+## Литераты числовых типов языка
 
 - Вещественные:
+
+[in]
 
 ```python
 1.3, 4., 1e+5, 1.0E+54
@@ -349,6 +421,8 @@ type(float())
 
 - Комплексные:
 
+[in]
+
 ```python
 3+4j, 2.0+1j, 5J
 ```
@@ -357,6 +431,8 @@ type(float())
     ((3+4j), (2+1j), 5j)
 
 - Расширение для дробных чисел
+
+[in]
 
 ```python
 import fractions
@@ -367,11 +443,15 @@ len(str(a.denominator))
 
     477122
 
-### `Сравнение чисел`
+## Сравнение чисел
+
+[in]
 
 ```python
 x, y, z = 1, 2, 3
 ```
+
+[in]
 
 ```python
 x < y < z
@@ -380,12 +460,16 @@ x < y < z
 
     True
 
+[in]
+
 ```python
 x < y >= z
 ```
 [out]
 
     False
+
+[in]
 
 ```python
 x < y != z
@@ -394,7 +478,9 @@ x < y != z
 
     True
 
-### `Округление вещественных чисел`
+## Округление вещественных чисел
+
+[in]
 
 ```python
 11.0 // 3.0  # remove remainder
@@ -402,6 +488,8 @@ x < y != z
 [out]
 
     3.0
+
+[in]
 
 ```python
 import math
@@ -414,6 +502,8 @@ print(math.trunc(-4.7))
     4
     -4
 
+[in]
+
 ```python
 print(math.floor(4.7))  # move to lowest integer
 print(math.floor(-4.7))
@@ -422,6 +512,8 @@ print(math.floor(-4.7))
 
     4
     -5
+
+[in]
 
 ```python
 print(round(4.3))  # standart round
@@ -432,7 +524,9 @@ print(round(-4.7))
     4
     -5
 
-### `Полезные встроенные функции для чисел`
+## Полезные встроенные функции для чисел
+
+[in]
 
 ```python
 pow(2, 4) == 2 ** 4
@@ -441,12 +535,16 @@ pow(2, 4) == 2 ** 4
 
     True
 
+[in]
+
 ```python
 abs(-2)
 ```
 [out]
 
     2
+
+[in]
 
 ```python
 sum((1, 2, 3))
@@ -455,12 +553,16 @@ sum((1, 2, 3))
 
     6
 
+[in]
+
 ```python
 min(1, 2, -7, 44)
 ```
 [out]
 
     -7
+
+[in]
 
 ```python
 import math
@@ -474,12 +576,16 @@ print(math.sin(8))
 
 ### `Тип None`
 
+[in]
+
 ```python
 None == None
 ```
 [out]
 
     True
+
+[in]
 
 ```python
 None or True
@@ -488,12 +594,16 @@ None or True
 
     True
 
+[in]
+
 ```python
 type(None)
 ```
 [out]
 
     NoneType
+
+[in]
 
 ```python
 5 * None  # strong typing
@@ -512,6 +622,8 @@ type(None)
 
 ### `Строки`
 
+[in]
+
 ```python
 s = 'qwerty'
 type(s)
@@ -520,12 +632,16 @@ type(s)
 
     str
 
+[in]
+
 ```python
 len(s)  # built-in function to get sequence length
 ```
 [out]
 
     6
+
+[in]
 
 ```python
 s[0]  # make a copy of element
@@ -534,12 +650,16 @@ s[0]  # make a copy of element
 
     'q'
 
+[in]
+
 ```python
 s[-1]  # make a copy of element
 ```
 [out]
 
     'y'
+
+[in]
 
 ```python
 s[0: 3]  # make a copy of elements from 0 to 3 excluding
@@ -548,6 +668,8 @@ s[0: 3]  # make a copy of elements from 0 to 3 excluding
 
     'qwe'
 
+[in]
+
 ```python
 s + '-add-on'
 ```
@@ -555,7 +677,9 @@ s + '-add-on'
 
     'qwerty-add-on'
 
-### `Подробнее об индексировани и срезах`
+## Подробнее об индексировани и срезах
+
+[in]
 
 ```python
 s = 'qwerty'
@@ -565,12 +689,16 @@ s[0]
 
     'q'
 
+[in]
+
 ```python
 s[0: 10]
 ```
 [out]
 
     'qwerty'
+
+[in]
 
 ```python
 s[slice(1, 3)]
@@ -579,12 +707,16 @@ s[slice(1, 3)]
 
     'we'
 
+[in]
+
 ```python
 s[:10:2]  # QwErTy____
 ```
 [out]
 
     'qet'
+
+[in]
 
 ```python
 s[::-1]
@@ -593,7 +725,9 @@ s[::-1]
 
     'ytrewq'
 
-### `Операции над строками`
+## Операции над строками
+
+[in]
 
 ```python
 s + 5  # strong typing
@@ -610,12 +744,16 @@ s + 5  # strong typing
     
     TypeError: can only concatenate str (not "int") to str
 
+[in]
+
 ```python
 s * 5  # strong typing
 ```
 [out]
 
     'qwertyqwertyqwertyqwertyqwerty'
+
+[in]
 
 ```python
 s[0] = 'a'  # str type is immutable
@@ -632,7 +770,9 @@ s[0] = 'a'  # str type is immutable
     
     TypeError: 'str' object does not support item assignment
 
-### `Операции над строками`
+## Операции над строками
+
+[in]
 
 ```python
 s = 'Qwe{}'.format('rty')
@@ -642,12 +782,16 @@ s
 
     'Qwerty'
 
+[in]
+
 ```python
 print(s.find('w'), s.find('9'))
 ```
 [out]
 
     1 -1
+
+[in]
 
 ```python
 s.split('r')
@@ -656,12 +800,16 @@ s.split('r')
 
     ['Qwe', 'ty']
 
+[in]
+
 ```python
 '-'.join(['New', 'York'])
 ```
 [out]
 
     'New-York'
+
+[in]
 
 ```python
 s.replace('ty', 'TY')
@@ -670,6 +818,8 @@ s.replace('ty', 'TY')
 
     'QwerTY'
 
+[in]
+
 ```python
 s[0].isupper()
 ```
@@ -677,7 +827,9 @@ s[0].isupper()
 
     True
 
-### `Как ещё можно задавать строки`
+## Как ещё можно задавать строки
+
+[in]
 
 ```python
 'qwe\'rty'
@@ -686,12 +838,16 @@ s[0].isupper()
 
     "qwe'rty"
 
+[in]
+
 ```python
 "qwe'rty"
 ```
 [out]
 
     "qwe'rty"
+
+[in]
 
 ```python
 '''qwe'rty'''
@@ -700,6 +856,8 @@ s[0].isupper()
 
     "qwe'rty"
 
+[in]
+
 ```python
 'qwe\0rty'  # print hex code in '\xNN' format for non-printable characters
 ```
@@ -707,12 +865,16 @@ s[0].isupper()
 
     'qwe\x00rty'
 
+[in]
+
 ```python
 'qwe\nrty'
 ```
 [out]
 
     'qwe\nrty'
+
+[in]
 
 ```python
 print('qwe\nrty')  # we'll discuss difference between __repr__ and __str__ further
@@ -722,9 +884,11 @@ print('qwe\nrty')  # we'll discuss difference between __repr__ and __str__ furth
     qwe
     rty
 
-### `Форматирование строк`
+## Форматирование строк
 
 В Python есть похожих способа форматирования - выражение и метод
+
+[in]
 
 ```python
 'x = %d, y = %f' % (10.5, 11)
@@ -733,6 +897,8 @@ print('qwe\nrty')  # we'll discuss difference between __repr__ and __str__ furth
 
     'x = 10, y = 11.000000'
 
+[in]
+
 ```python
 'x = %o, y = %E' % (8, 1.0 / 3)  # octal format, exponential + upper case
 ```
@@ -740,12 +906,16 @@ print('qwe\nrty')  # we'll discuss difference between __repr__ and __str__ furth
 
     'x = 10, y = 3.333333E-01'
 
+[in]
+
 ```python
 'x = %10.2f' % (1.0 / 3)  # min width and precision
 ```
 [out]
 
     'x =       0.33'
+
+[in]
 
 ```python
 # add leading zeros if len < min width
@@ -769,7 +939,9 @@ s         # __repr__
     
     '\nx = 0010000.00\nx = 0000000.12\n'
 
-### `Форматирование строк`
+## Форматирование строк
+
+[in]
 
 ```python
 'x = {}, y = {}'.format(10, 20)
@@ -778,12 +950,16 @@ s         # __repr__
 
     'x = 10, y = 20'
 
+[in]
+
 ```python
 'x = {1}, y = {0}'.format(10, 20)
 ```
 [out]
 
     'x = 20, y = 10'
+
+[in]
 
 ```python
 f'x = {10}, y = {20}'
@@ -792,12 +968,16 @@ f'x = {10}, y = {20}'
 
     'x = 10, y = 20'
 
+[in]
+
 ```python
 'x = {val_1:f}, y = {val_2:010.2f}'.format(val_1=10, val_2=10)
 ```
 [out]
 
     'x = 10.000000, y = 0000010.00'
+
+[in]
 
 ```python
 import sys
@@ -807,7 +987,9 @@ import sys
 
     'platform: linux'
 
-### `Строка как набор байтов`
+## Строка как набор байтов
+
+[in]
 
 ```python
 b = bytearray(b'qwerty')
@@ -816,6 +998,8 @@ type(b)
 [out]
 
     bytearray
+
+[in]
 
 ```python
 b[1] = ord('a')
@@ -829,7 +1013,9 @@ b
 - в отличие от `str`, объекты этого типа являются изменяемыми
 - функция `ord` возвращает по символу его номер в таблице ASCII
 
-### `Контейнерные типы: списки`
+## Контейнерные типы: списки
+
+[in]
 
 ```python
 lst = [1, None, 'qwerty']
@@ -838,6 +1024,8 @@ list([1, None, 'qwerty']) == lst  # list() gets any iterable object as input
 [out]
 
     True
+
+[in]
 
 ```python
 lst[0] = [10, 20]
@@ -851,7 +1039,9 @@ lst
 - элементы могут быть произвольного типа (в т.ч. и ссылками)
 - сам список является изменяемым типом
 
-### `Списки`
+## Списки
+
+[in]
 
 ```python
 len(lst)
@@ -860,12 +1050,16 @@ len(lst)
 
     3
 
+[in]
+
 ```python
 type(lst)
 ```
 [out]
 
     list
+
+[in]
 
 ```python
 lst[-1]
@@ -874,12 +1068,16 @@ lst[-1]
 
     'qwerty'
 
+[in]
+
 ```python
 lst[: 100]  # slice bounds can be exceed real ones
 ```
 [out]
 
     [[10, 20], None, 'qwerty']
+
+[in]
 
 ```python
 lst[5]
@@ -896,7 +1094,9 @@ lst[5]
     
     IndexError: list index out of range
 
-### `Операции над списками`
+## Операции над списками
+
+[in]
 
 ```python
 lst = [1, 2, 3]
@@ -907,12 +1107,16 @@ lst
 
     [1, 2, 3, 4]
 
+[in]
+
 ```python
 print(lst.pop(), lst)
 ```
 [out]
 
     4 [1, 2, 3]
+
+[in]
 
 ```python
 lst.sort(reverse=True)  # equals to lst.reverse()
@@ -922,12 +1126,16 @@ lst
 
     [3, 2, 1]
 
+[in]
+
 ```python
 lst * 2
 ```
 [out]
 
     [3, 2, 1, 3, 2, 1]
+
+[in]
 
 ```python
 lst + list('abc')
@@ -936,7 +1144,9 @@ lst + list('abc')
 
     [3, 2, 1, 'a', 'b', 'c']
 
-### `Списковые включения и генераторы списков`
+## Списковые включения и генераторы списков
+
+[in]
 
 ```python
 [x ** 2 for x in [1, 2, 3]]  # list comprehension
@@ -944,6 +1154,8 @@ lst + list('abc')
 [out]
 
     [1, 4, 9]
+
+[in]
 
 ```python
 lst = [x ** 2 for x in [1, 2, 3] if x > 1]
@@ -961,6 +1173,8 @@ for _ in [1, 2]:  # _ means value we really don't need
     4
     9
 
+[in]
+
 ```python
 lst = (x ** 2 for x in [1, 2, 3] if x > 1)  # list generator
 print(type(lst))
@@ -975,7 +1189,9 @@ for _ in [1, 2]:
     4
     9
 
-### `Снова про объекты и переменные`
+## Снова про объекты и переменные
+
+[in]
 
 ```python
 a = [2]
@@ -990,6 +1206,8 @@ print(b)
 - список - изменяемый объект, создание новой ссылки не приводит к появлению нового объекта
 - есть две переменные, указывающие на один и тот же список
 
+[in]
+
 ```python
 del a
 print(b)
@@ -1000,7 +1218,9 @@ print(b)
 
 - удаление `a` не приводит у удалению списка, поскольку на него ещё ссылается `b`
 
-### `Копирование изменяемых объектов`
+## Копирование изменяемых объектов
+
+[in]
 
 ```python
 a = [1, 2, 3]
@@ -1012,6 +1232,8 @@ print(a)
 
     [1, 2, 3]
 
+[in]
+
 ```python
 a = [1, 2, 3]
 b = a.copy()
@@ -1022,7 +1244,9 @@ print(a)
 
     [1, 2, 3]
 
-### `Копирование вложенных изменяемых объектов`
+## Копирование вложенных изменяемых объектов
+
+[in]
 
 ```python
 a = [['a', 'b', 'c'], 2, 3]
@@ -1035,6 +1259,8 @@ print(b)
 
     [['a', 'b', 'c', 'd'], 2, 3]
     [['a', 'b', 'c', 'd'], 2, 3]
+
+[in]
 
 ```python
 import copy
@@ -1050,7 +1276,7 @@ print(b)
     [['a', 'b', 'c'], 2, 3]
     [['a', 'b', 'c', 'd'], 2, 3]
 
-### `Контейнерные типы: словари`
+## Контейнерные типы: словари
 
 - словарь (`dict`) - это ассоциативный массив (отображение), т.е. набор пар "ключ-значение"
 - словарь поддерживает возможность быстро искать значение по ключу
@@ -1059,7 +1285,9 @@ print(b)
 - значения могут иметь произвольный тип
 - ключи - произвольный неизменяемый тип
 
-### `Словари`
+## Словари
+
+[in]
 
 ```python
 type(dict()), type({})
@@ -1067,6 +1295,8 @@ type(dict()), type({})
 [out]
 
     (dict, dict)
+
+[in]
 
 ```python
 # simple creation of nested structures!
@@ -1077,6 +1307,8 @@ d
 
     {'1': 1, 's': 2, None: [1, {None: True}]}
 
+[in]
+
 ```python
 d['s'] = 'two'
 d
@@ -1084,6 +1316,8 @@ d
 [out]
 
     {'1': 1, 's': 'two', None: 5}
+
+[in]
 
 ```python
 del d['1']  # remove object
@@ -1093,11 +1327,15 @@ print(d)
 
     {'s': 'two', None: 5}
 
+[in]
+
 ```python
 d2 = {('s', 3), ('a', 'b')}
 ```
 
-### `Операции над словарями`
+## Операции над словарями
+
+[in]
 
 ```python
 d = dict.fromkeys(list('abcccc'))
@@ -1107,6 +1345,8 @@ d
 
     {'a': None, 'b': None, 'c': None}
 
+[in]
+
 ```python
 for k in d.keys():  # view object
     d[k] = ord(k)
@@ -1115,6 +1355,8 @@ d
 [out]
 
     {'a': 97, 'b': 98, 'c': 99}
+
+[in]
 
 ```python
 for k, v in d.items():  # view object
@@ -1126,6 +1368,8 @@ for k, v in d.items():  # view object
     b 98
     c 99
 
+[in]
+
 ```python
 D = dict(a=ord('a'), b=ord('b'), c=ord('c'))
 d == D
@@ -1133,6 +1377,8 @@ d == D
 [out]
 
     True
+
+[in]
 
 ```python
 d.update(d2)
@@ -1142,9 +1388,11 @@ d
 
     {'s': 3, None: 5, 'a': 'b'}
 
-### `Контейнерные типы: кортежи`
+## Контейнерные типы: кортежи
 
 - очень похожи на списки, но являются неизменяемыми
+
+[in]
 
 ```python
 type(()), type(tuple())
@@ -1153,6 +1401,8 @@ type(()), type(tuple())
 
     (tuple, tuple)
 
+[in]
+
 ```python
 (1, 2, 'str', 4.0, None)
 ```
@@ -1160,12 +1410,16 @@ type(()), type(tuple())
 
     (1, 2, 'str', 4.0, None)
 
+[in]
+
 ```python
 (1, 2) + (3.0, 6, None)
 ```
 [out]
 
     (1, 2, 3.0, 6, None)
+
+[in]
 
 ```python
 tpl = tuple([1, 2, 3])
@@ -1175,10 +1429,12 @@ tpl[2]
 
     3
 
-### `Контейнерные типы: множества`
+## Контейнерные типы: множества
 
 - Как и словари, основаны на хэш-таблицах
 - Элементы должны быть неизменяемыми
+
+[in]
 
 ```python
 type(set()), type({1}), type({})  # Empty '{}' is a dict, not a set!
@@ -1187,12 +1443,16 @@ type(set()), type({1}), type({})  # Empty '{}' is a dict, not a set!
 
     (set, set, dict)
 
+[in]
+
 ```python
 {1, 2, 3, 3, 2, 1, 'set', 'a'}
 ```
 [out]
 
     {1, 2, 3, 'a', 'set'}
+
+[in]
 
 ```python
 s = {1, 2, 3}
@@ -1203,6 +1463,8 @@ s
 
     {1, 2, 3, 4}
 
+[in]
+
 ```python
 s1, s2 = {1, 2, 3}, set([3, 4, 5])
 
@@ -1212,11 +1474,15 @@ print('{}\t{}\t{}\t{}'.format(s1 - s2, s1 | s2, s1 & s2, s1 < s2))
 
     {1, 2}    {1, 2, 3, 4, 5}    {3}    False
 
-### `Операции над множествами`
+## Операции над множествами
+
+[in]
 
 ```python
 A, B = set('abc'), {'a', 'c', 'd'}
 ```
+
+[in]
 
 ```python
 A - B  # minus: in A and not in B (== A.difference(B))
@@ -1225,12 +1491,16 @@ A - B  # minus: in A and not in B (== A.difference(B))
 
     {'b'}
 
+[in]
+
 ```python
 A | B  # union: in A or in B (== A.union(B))
 ```
 [out]
 
     {'a', 'b', 'c', 'd'}
+
+[in]
 
 ```python
 A & B  # intersection: in A and in B (== A.intersection(B))
@@ -1239,6 +1509,8 @@ A & B  # intersection: in A and in B (== A.intersection(B))
 
     {'a', 'c'}
 
+[in]
+
 ```python
 A ^ B  # sym diff: (in A and not in B) and via versa (== A.symmetric_difference(B))
 ```
@@ -1246,7 +1518,9 @@ A ^ B  # sym diff: (in A and not in B) and via versa (== A.symmetric_difference(
 
     {'b', 'd'}
 
-### `Операции над множествами`
+## Операции над множествами
+
+[in]
 
 ```python
 A.add('e')
@@ -1256,6 +1530,8 @@ A
 
     {'a', 'b', 'c', 'e'}
 
+[in]
+
 ```python
 A.update(B)
 A
@@ -1263,6 +1539,8 @@ A
 [out]
 
     {'a', 'b', 'c', 'd', 'e'}
+
+[in]
 
 ```python
 A.remove('a')
@@ -1272,12 +1550,16 @@ A
 
     {'b', 'c', 'd', 'e'}
 
+[in]
+
 ```python
 'a' in A
 ```
 [out]
 
     False
+
+[in]
 
 ```python
 {'a', 'b'} < A  # is subset (== {'a', 'b'}.issubset(A))
@@ -1286,7 +1568,9 @@ A
 
     True
 
-### `Файловый тип`
+## Файловый тип
+
+[in]
 
 ```python
 fin = open('some_file.txt', 'r')  # 'r' can be avoided
@@ -1305,6 +1589,8 @@ fin.closed
     
     
     True
+
+[in]
 
 ```python
 fin = open('some_file.txt', 'r')  # 'r' can be avoided
@@ -1326,7 +1612,9 @@ fin.closed
     
     True
 
-### `Файловый менеджер контекста`
+## Файловый менеджер контекста
+
+[in]
 
 ```python
 fin = open('some_file.txt', 'r')  # 'r' can be avoided
@@ -1347,6 +1635,8 @@ fin.close()
     
     ZeroDivisionError: division by zero
 
+[in]
+
 ```python
 fin.closed
 ```
@@ -1354,7 +1644,9 @@ fin.closed
 
     False
 
-### `Файловый менеджер контекста`
+## Файловый менеджер контекста
+
+[in]
 
 ```python
 with open('some_file.txt', 'r') as fin:
@@ -1373,6 +1665,8 @@ with open('some_file.txt', 'r') as fin:
     
     ZeroDivisionError: division by zero
 
+[in]
+
 ```python
 fin.closed
 ```
@@ -1380,14 +1674,18 @@ fin.closed
 
     True
 
-### `Запись в файл`
+## Запись в файл
 
 - отступы используются для обозначения операторных блоков (вместо фигурных скобок в C++)
+
+[in]
 
 ```python
 with open('some_file.txt', 'a') as fout:
     fout.write('additional string')
 ```
+
+[in]
 
 ```python
 with open('some_file.txt', 'r') as fin:
@@ -1399,10 +1697,14 @@ with open('some_file.txt', 'r') as fin:
     world!
     additional string
 
+[in]
+
 ```python
 with open('some_file.txt', 'w') as fout:
     fout.write('new\ncontent')
 ```
+
+[in]
 
 ```python
 with open('some_file.txt', 'r') as fin:
@@ -1413,15 +1715,19 @@ with open('some_file.txt', 'r') as fin:
     new
     content
 
-### `Содержимое файлов как массив байтов`
+## Содержимое файлов как массив байтов
 
 Полезно при работе с сериализаторами
+
+[in]
 
 ```python
 s = bytearray('строка', 'utf-8')
 with open('tmp.bin', 'wb') as fout:
     fout.write(s)
 ```
+
+[in]
 
 ```python
 with open('tmp.bin', 'r') as fin:
@@ -1431,6 +1737,8 @@ with open('tmp.bin', 'r') as fin:
 
     ['с', 'т', 'р', 'о', 'к', 'а']
 
+[in]
+
 ```python
 with open('tmp.bin', 'rb') as fin:
     print(list(fin.read()))
@@ -1439,6 +1747,8 @@ with open('tmp.bin', 'rb') as fin:
 
     [209, 129, 209, 130, 209, 128, 208, 190, 208, 186, 208, 176]
 
+[in]
+
 ```python
 len('з'.encode('utf-8'))
 ```
@@ -1446,39 +1756,13 @@ len('з'.encode('utf-8'))
 
     2
 
-### `Оператор цикла for`
-
-- в отличие от C/C++, в Python чаще всего используются range-based for-циклы
-- классические циклы по индексам так же доступны, но при прочих равных менее предпочтительны
-
-```python
-lst = ['a', 'b', 'c']
-for element in lst:  # range-based for
-    print(element)
-```
-[out]
-
-    a
-    b
-    c
-
-```python
-for index in range(len(lst)):  # index-based for
-    print(lst[index])
-```
-[out]
-
-    a
-    b
-    c
-
-- функция `range` создаёт генератор, позволяющий итерироваться по последовательности чисел с заданными границами и шагом
-
-### `Атрибуты объекта`
+## Атрибуты объекта
 
 - любой объект в Python имеет атрибуты: набор полей и методов, определяющих свойства объекта и способы работы с ним
 - атрибуты можно читать, устанавливать и менять
 - список всех атрибутов получается с помощью встроенной функции `dir`
+
+[in]
 
 ```python
 print(len(dir(5)))
@@ -1489,6 +1773,8 @@ print(dir(5)[: 4])
     70
     ['__abs__', '__add__', '__and__', '__bool__']
 
+[in]
+
 ```python
 a = 5
 a.__and__(0)  # exactly the same as 'a and 0'
@@ -1497,7 +1783,7 @@ a.__and__(0)  # exactly the same as 'a and 0'
 
     0
 
-### `Как правильно называть переменные`
+## Как правильно называть переменные
 
 - `regular_variable`
 - `ClassName`
@@ -1508,3 +1794,278 @@ a.__and__(0)  # exactly the same as 'a and 0'
 __Не используйте переменные с unicode-символами__:
 
 - `плохое_имя_для_переменной`
+
+## Идентификатор объекта
+
+- у каждого объекта в Python есть целочисленный идентификатор
+- на время жизни объекта он является уникальным
+- получить идентификатор объекта можно с помощью функции `id`
+
+
+[in]
+
+```python
+a = 10
+b = 12
+print(id(a), id(b))
+```
+
+[out]
+
+    93923529852224 93923529852288
+
+
+- идентификатор зависит от реализации, это может быть адрес в памяти
+- у одинаковых константных объектов этот идентификатор всегда одинаковый
+
+
+[in]
+
+```python
+a, b = 10, 10
+c, d = 12, 12
+print(id(a), id(b), '\n')
+print(id(c), id(d))
+```
+
+[out]
+
+    93923529852224 93923529852224 
+    
+    93923529852288 93923529852288
+
+
+## Идентификатор константного объекта
+
+- таким образом, одинаковые константы хранятся в единственном экземпляре
+- Python делает так для экономии памяти
+- типы в Python тоже являются объектами
+
+
+[in]
+
+```python
+print(id(type(12)), id(type(5)), id(int), '\n')
+print(id(None), id(type(None)))
+```
+
+[out]
+
+    93923529721376 93923529721376 93923529721376 
+    
+    93923529715952 93923529715552
+
+
+- проверка равенства идентификаторов делается с помощью оператора `is`
+
+
+[in]
+
+```python
+a = None
+print(a is None)
+print(a == None)
+```
+
+[out]
+
+    True
+    True
+
+
+## Идентификатор изменяемого объекта
+
+- два одинаковых списка не идентичны:
+
+
+[in]
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+a is b
+```
+
+
+
+
+[out]
+
+    False
+
+
+
+- две ссылки на один список идентичны:
+
+
+[in]
+
+```python
+c = a
+a is c
+```
+
+
+
+
+[out]
+
+    True
+
+
+
+- и все между собой, очевидно, равны:
+
+
+[in]
+
+```python
+a == b == c
+```
+
+
+
+
+[out]
+
+    True
+
+
+
+## Почему на None надо проверять с помощью is
+
+
+[in]
+
+```python
+# https://stackoverflow.com/questions/3257919/what-is-the-difference-between-is-none-and-none
+
+class Foo:
+    def __eq__(self,other):  # magic method: == operator
+        return True
+
+foo=Foo()
+
+print(foo==None)
+
+print(foo is None)
+```
+
+[out]
+
+    True
+    False
+
+
+- кроме того, проверка на идентичность в общем случае быстрее, чем на эквивалентность
+
+## Стадии жизни объекта
+
+- Создание объекта приводит к выделению фрагмента памяти
+- У каждого объекта есть счётчик ссылок
+- Каждое новая ссылающаяся переменная увеличивает этот счётчик на единицу
+- Ссылку можно удалить с помощью оператора `del`
+- Когда счётчик ссылок на объект становится равным 0, объект удаляется
+- Удаление и создание объектов может не приводит к изменениям памяти в некоторых случаях из-за кэширования (например 0 или None)
+- Но в общем случае память выделяется и освобождается
+
+## Сборщик мусора
+
+- Освобождение памяти производит сборщик мусора (Garbage Collector)
+- Памяти освобождается не моментально, а в некоторый недетерминированный момент
+- Одной из сложностей поиска объектов для удаления являются т.н. циклические ссылки
+
+
+[in]
+
+```python
+a = [None]
+a[0] = a
+del a
+```
+
+- Сборщик мусора умеет работать с такими случаями
+
+## Полезные функции
+
+
+[in]
+
+```python
+import gc
+gc.collect()  # call collection immediately
+```
+
+
+[in]
+
+```python
+import sys
+a = 1
+print(sys.getrefcount(a))  # cached popular value
+print(sys.getrefcount('some str'))  # 1 after creation, 1 temporary, 1 - ???
+```
+
+[out]
+
+    2331
+    3
+
+
+## Слабые ссылки
+
+- Иногда возникает необходимость вести учёт объектов только когда они используются где-нибудь ещё
+- Но само слежение уже создаёт ссылку, из-за которой объект будет оставаться в памяти
+- Слабые ссылки дают возможность вести учёт объекта без создания ссылок на них
+- Для этого используется модуль weakref
+- Классическое приложение - кэширование объектов, пересоздание которых является затратным
+- Слабые ссылки нельзя создавать на объекты базовых типов
+
+## Слабые ссылки
+
+
+[in]
+
+```python
+# http://old.pynsk.ru/posts/2015/Sep/19/tainstvo-standartnoi-biblioteki-slabye-ssylki-weakref/#.XkhkS9kueV4
+
+import weakref, gc
+
+class A:
+    def __init__(self, value):
+        self.value = value
+    def __repr__(self):  # magic method: information for print
+        return str(self.value)
+
+a = A(10)  # create object and strong reference
+d = weakref.WeakValueDictionary()  # dict with weak references
+
+d['k'] = a
+d['k']
+```
+
+[out]
+
+    10
+
+
+[in]
+
+```python
+del a
+gc.collect()
+d['k']
+```
+
+
+
+
+[out]
+
+    10
+
+
+
+- при запуске из терминала получается вывод "KeyError: 'k'"
+- видимо, в ноутбуке создаются дополнительные неявные ссылки
+
