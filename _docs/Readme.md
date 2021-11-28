@@ -16,7 +16,8 @@
 2. [Основы Git](decrypted-messages/02-git-basics.md)
 3. [Основы linux](decrypted-messages/03-linux-basics.md)
 3. [Инструменты командной строки python](decrypted-messages/04-python-cli-tools.md)
-4. [Типы данных в python](decrypted-messages/05-python-types.ipynb)
+4. [Типы данных в python](decrypted-messages/05-python-types.md)
+5. [Уловия, циклы и регулярные выражения](decrypted-messages/06-if-and-for.md)
 
 ## Полезные ресурсы
 
